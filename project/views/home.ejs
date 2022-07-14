@@ -1,0 +1,15 @@
+<%- include('partials/header') %>
+    <h1>Home</h1>
+    <p> <%= homeStartPara %> </p>
+        <h3>Blogs:</h3>
+        <hr>
+        <% for(var i= 0; i <postArr.length; i++){ %>
+            <h1> <%= postArr[i].title %> </h1>
+                <p> <%= postArr[i].body.substring(0,100) +" ..." %> <a
+                            href="/posts/<%= postArr[i].title %> ">Read More</a>
+                    </p>
+                    <% } %>
+                        <hr>
+                        <a name="" id="" class="btn btn-primary" href="/compose"
+                            role="button">Compose New Blog</a>
+                        <%- include('partials/footer') %>
